@@ -15,7 +15,7 @@
         'security/ir.model.access.csv',
         'views/sticky_note_view.xml',
     ],
-    'images': ['static/description/image1.png','static/description/image2.png','static/description/image3.png','static/description/image4.png'],
+    'images': ['static/description/sticky_notes_animation.gif'],
     'assets': {
         'web.assets_backend': [
             'bb_sticky_note/static/src/js/form_controller.js',
