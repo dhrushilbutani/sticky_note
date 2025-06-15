@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="sticky_note_seq" model="ir.sequence">
+        <field name="name">Sticky Note</field>
+        <field name="code">sticky.note.seq</field>
+        <field name="prefix">SN</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False"/>
+    </record>
+
+</odoo>

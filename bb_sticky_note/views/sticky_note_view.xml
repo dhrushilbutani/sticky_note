@@ -1,0 +1,57 @@
+<odoo>
+    <record id="sticky_note_form_view" model="ir.ui.view">
+        <field name="name">Stick Note: Form</field>
+        <field name="model">sticky.note</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" readonly="1"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="title"/>
+                            <field name="user_id"/>
+                            <field name="color"/>
+                            <field name="record_ref"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Description">
+                            <field name="description"/>
+                        </page>
+                    </notebook>
+                </sheet>
+
+            </form>
+        </field>
+    </record>
+
+    <record id="sticky_note_tree_view" model="ir.ui.view">
+        <field name="name">Sticky Note Tree</field>
+        <field name="model">sticky.note</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="user_id"/>
+                <field name="record_ref"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="sticky_note_action" model="ir.actions.act_window">
+        <field name="name">Sticky Note</field>
+        <field name="res_model">sticky.note</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+
+
+
+    <menuitem id="sticky_note_menu"
+              name="Stick Note"
+              action="sticky_note_action"
+              parent="base.menu_administration"/>
+</odoo>
